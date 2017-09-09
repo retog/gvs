@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ser="http://gvs.hpl.hp.com/ontologies/services#"
+    xmlns:http="http://gvs.hpl.hp.com/ontologies/http-listener#"
+    xmlns:aggr="http://jena.hpl.hp.com/gvs/aggregator#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:am="http://gvs.hpl.hp.com/ontologies/account-manager#"
+    xmlns:auth="http://gvs.hpl.hp.com/ontologies/authorization#">
+    <rdf:Description rdf:about="#">
+    	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-11-06T00:08:00Z</dc:date>
+    </rdf:Description>
+    <ser:Service>
+    	<ser:factoryJavaClass>com.hp.hpl.jena.gvs.services.HTTPListenerFactory</ser:factoryJavaClass>
+    	<ser:identity rdf:resource="http://gvs.hpl.hp.com/default/users/webserver#" />
+    	<ser:trustedSource rdf:resource="http://gvs.hpl.hp.com/default-config#" />
+    	<ser:configuration>
+			<rdf:Description rdf:about="http://gvs.hpl.hp.com/default/config/http#">
+				<http:port rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8686</http:port>
+			</rdf:Description>
+    	</ser:configuration>
+    </ser:Service>
+    <ser:Service>
+    	<ser:factoryJavaClass>com.hp.hpl.jena.gvs.services.aggregator.AggregatorFactory</ser:factoryJavaClass>
+    	<ser:identity rdf:resource="http://gvs.hpl.hp.com/default/users/aggregator#" />
+    	<ser:trustedSource rdf:resource="http://gvs.hpl.hp.com/users/aggregation-master#" />
+    	<ser:trustedSource rdf:resource="http://gvs.hpl.hp.com/default-config#" />
+    	<ser:configuration>
+			<rdf:Description rdf:about="http://gvs.hpl.hp.com/default/config/aggregator#">
+			</rdf:Description>
+    	</ser:configuration>
+    </ser:Service>
+    <rdf:Description rdf:about="http://gvs.hpl.hp.com/welcome">
+	    <aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21600</aggr:interval>
+	    <rdf:type rdf:resource="http://jena.hpl.hp.com/gvs/aggregator#AggregatedSource"/>
+	</rdf:Description>
+	<rdf:Description>
+		<am:userName>root</am:userName>
+		<am:passwordSha1>dc76e9f0c0006e8f919e0c515c66dbba3982f785</am:passwordSha1>
+		<auth:mayImpersonate rdf:resource="http://gvs.hpl.hp.com/default-config#"/>
+  </rdf:Description>  
+	  
+</rdf:RDF>

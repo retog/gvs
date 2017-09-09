@@ -1,0 +1,39 @@
+<project name="gvs-aggregator" default="all" basedir="../../../../../../../">
+
+
+	<!-- This ant script generates the vocabulary java file in this packages from their
+	 respective schema definition. It uses the java app jena.schemagen.
+-->
+
+
+	<!-- Construct the classpath -->
+	<path id="project.class.path">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="../jena2/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+
+	
+	<target name="aggregator">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg file="rdf/aggregator.rdf" />
+				<arg value="-o" />
+				<arg file="src/com/hp/hpl/jena/gvs/aggregator/AGGREGATOR.java" />
+				<arg value="-n" />
+				<arg value="AGGREGATOR" />
+				<arg value="-a" />
+				<arg value="http://jena.hpl.hp.com/gvs/aggregator#" />
+				<arg value="--package" />
+				<arg value="com.hp.hpl.jena.gvs.aggregator" />
+				<arg value="--owl" />
+			</java>
+		</target>
+	
+	<target name="all" depends="aggregator" />
+
+</project>

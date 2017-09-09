@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/2001/REC-xhtml11-20010531/DTD/xhtml11-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>GVS: Edit Graph</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/gvs" />
+		<link rel="shortcut icon" type="image/x-icon" href="/application/images/favicon.ico" />
+		<script type="text/javascript" src="/application/scripts/gvs" />
+		<script type="text/javascript" src="/application/scripts/graph-editor" />
+		<script type="text/javascript" src="/application/scripts/parameters" />
+		<script type="text/javascript">
+			var parameters = new Parameters();
+			var sourceURI = parameters.getField("source");
+			var graphEditor = new GraphEditor(sourceURI);
+
+
+		</script>
+	</head>
+	<body onload="graphEditor.init()">
+	
+		<h1><a href="http://www.hp.com/"><img src="images/hpc60_topnav_hp_logo" width="63" height="53" alt="hp.com home"  /></a>
+		GVS: Edit Graph</h1>
+		<p>Set a new version for the source <span id="source"/> by 
+		editing and saving the XML/RDF.</p>
+		<form>
+			<div>
+				<textarea id="editarea" cols="155" rows="50"/>
+			</div>
+			<div>
+				<button onclick="graphEditor.save(); return false;">Save</button>
+			</div>
+		</form>
+		<div>
+			<a href="/application/gvs-browser">Back to the GVS-Browser</a>
+		</div>
+		<div>
+			<a href="/application/disco?source=" id="discoLink">To the Discobits editor</a>
+			<script type="text/javascript">
+				var discoLink = document.getElementById('discoLink');
+				discoLink.href += escape(sourceURI);
+			</script>
+		</div>
+		<div id="footer" class="small">
+		<div>
+		    <a href="http://validator.w3.org/check?uri=referer"><img
+		        src="/application/images/valid-xhtml11"
+		        alt="Valid XHTML 1.1" height="31" width="88" /></a>
+		</div>
+		
+
+		<div id="copyright" class="small"> &copy; 2006 - 2007 Hewlett-Packard Development Company,
+		  L.P. </div>
+		</div> 
+	</body>
+</html>

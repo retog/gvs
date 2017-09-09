@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+  <title>Graph Versioning System (GVS)</title>
+
+  <section>
+    <title>Motivation</title>
+
+    <para>RDF-Graphs are a highly expressive way to describe a world. However
+    in it's core foundations it is not designed to describe changing worlds or
+    changing assumptions about the describe world. Also, it's abilities to
+    handle multiple, partially overlapping world-views are limited. In
+    specific domains this issues may be addressed by wise ontology design, but
+    this is not a solution in the general case. Most triples out there in the
+    wild are true in certain time-slices of the referred world.</para>
+
+    <para>These aspects of temporality and provenance have recently gained
+    importance in the discussions of a broader semantic web community. Many
+    postulate quite significant changes to standards (quads, etc.) other
+    propose solutions that stuck with the current technological foundation but
+    restrict the expressive power (as relying on reification or reducing
+    leanifiability). The approach presented is designed to comply with current
+    standards and be able to deal with available real life RDF data and
+    sources while internaly using which is not limited to the expressibility
+    of one model.</para>
+  </section>
+
+  <section>
+    <title>Abstract</title>
+
+    <para>GVS allows persistent storage of RDF-graphs keeping track of history
+    and provenance. It also allows to retrieve unions of graphs from multiple
+    source and/or multiple points in time.</para>
+  </section>
+
+  <section>
+    <title>Terms</title>
+
+    <glosslist>
+      <glossentry>
+        <glossterm>Source</glossterm>
+
+        <glossdef>
+          <para>An entity delivering and possibly revoking assertions
+          expressed in RDF, e.g. the location of a FOAF-PPD, an RSS-Feed or an
+          agent interacting with a Jena model. Some sources implicitly revoke
+          any previously delivered assertion (e.g. a FOAF-PPD) while for
+          others a delivered Graph is to be a considered an extension to
+          previous assertions.</para>
+        </glossdef>
+      </glossentry>
+
+      <glossentry>
+        <glossterm>Store</glossterm>
+
+        <glossdef>
+          <para>The main entity and interface of GVS to which graph are added
+          and retrieved</para>
+        </glossdef>
+      </glossentry>
+
+      <glossentry>
+        <glossterm>Molecule</glossterm>
+
+        <glossdef>
+          <para>Element of a lossless graph decomposition<footnote>
+              <para>The term and concept was introduced by Ding et All in
+              <ulink
+              url="http://ebiquity.umbc.edu/paper/html/id/240/">http://ebiquity.umbc.edu/paper/html/id/240/</ulink>,
+              the concrete implementation however slightly differ from this
+              paper to allow a deterministic graph decomposition</para>
+            </footnote>.</para>
+        </glossdef>
+      </glossentry>
+
+      <glossentry>
+        <glossterm>Graph / Model</glossterm>
+
+        <glossdef>
+          <para>An RDF graph, the terms are used interchangeably. Two graphs
+          are equals if their lean versions are isomorphic (GVS does not
+          guarantee that redundant triples/b-nodes are preserved).</para>
+        </glossdef>
+      </glossentry>
+
+      <glossentry>
+        <glossterm>Meta-Model</glossterm>
+
+        <glossdef>
+          <para>A model used internally by a store describing assertions and
+          revocations of molecules. As well as some intrinsic properties of
+          the molecules used for retrieval and comparison (hash).</para>
+        </glossdef>
+      </glossentry>
+    </glosslist>
+  </section>
+
+  <section>
+    <title>Architecture</title>
+
+    <para>Every graph added to the store is decomposed into molecules. The
+    molecules that aren't in the store already are given a name<footnote>
+        <para>This name is used only for reference in the meta-model and is
+        not exposed</para>
+      </footnote> for referencing in the meta-model. In the meta-model
+    intrinsic properties of the molecule like hashes<footnote>
+        <para>For most (molecule-)graphs it is possible to calculate a strong
+        hash by a deterministic serialization [Carroll-???] this prevents the
+        need of future graph-isomorphism operations, on some graphs however
+        only a week hash can be calculated. Additional properties may be
+        stored to facilitate operations like sub-graph isomorphism.</para>
+      </footnote> are stored, as well as source and time of
+    assertion/revocation.</para>
+  </section>
+
+  <section>
+    <title>Store Interface</title>
+
+    <para>A GVS store expose the following methods</para>
+
+    <section>
+      <title>assertGraph(Model m, Source s)</title>
+
+      <para>This method is invoked to add a model to the store.</para>
+    </section>
+
+    <section>
+      <title>revokeGraph(Model m, Source s)</title>
+
+      <para>This method is invoked when the specified Source s has stopped
+      asserting the Model m.</para>
+    </section>
+
+    <section>
+      <title>updateGraph(Model m, Source s)</title>
+
+      <para>Tells the store that s is asserting m at the current point in
+      time, and that this graph replaces previous versions, i.e. whatever has
+      previously been asserted by s and is not contained in m is
+      revoked.</para>
+    </section>
+
+    <section>
+      <title>getGraph(Source[] s, Date t)</title>
+
+      <para>Returns a graph containing all assertions of all sources s that
+      were asserted but not revoked since the last assertion at the moment
+      t.</para>
+    </section>
+  </section>
+
+  <section>
+    <title>Possibilities and Limitation</title>
+
+    <para>The shared decomposition of graphs is a good foundation to implement
+    things like the "oh, yeah?" button [TBL-???] proposed by Tim Berners Lee.
+    This button tells the user why she should believe a certain statement, or
+    more technically which source asserted a certain graph or a supergraph of
+    it. Having decomposed the graph in small molecules a fast answer is
+    possible even with the complex subgraph-isomorphism operation. However, it
+    may not be possible to implement a fast enough solution that takes into
+    account that a subgraph containing b-nodes may be implied by another part
+    of the graph where the corresponding nodes are named, research has to be
+    done to find out if and what degree of incompleteness of the "oh,
+    yeah?"-answer is to be accepted for the shake of performance.</para>
+  </section>
+
+  <section>
+    <title>Work already done</title>
+
+    <para>I've already implemented decomposition into molecules and a diff and
+    patch utility. This utility has been extensively tested with real-life
+    graphs, corner case "pathological" graphs as well as hight amount of
+    randomly generated graphs so the foundation has been proven to be usable
+    and working.</para>
+  </section>
+
+  <section>
+    <title>Implementation</title>
+
+    <para>In a period of six months GVS could be implemented as a stable and
+    reasonably performant utility and documentation as well as some tiny
+    demo-applications could be provided, roughly the timetable cool look as
+    follows:</para>
+
+    <section>
+      <title>Prototyping: 6 weeks</title>
+
+      <para>Without investing too much in performance and exposing transparent
+      Jena-Model interfaces a prototype implementing the base functionality is
+      implemented. With the prototype a set of unit-tests will be developed as
+      well.</para>
+    </section>
+
+    <section>
+      <title>Performance-tests: 1 weeks</title>
+
+      <para>The unit tests should be extended to allow performance
+      measuring.</para>
+    </section>
+
+    <section>
+      <title>Integration planning: 2 weeks</title>
+
+      <para>In extensive exchange with the Jena-team a tight and wherever
+      possible transparent integration with the Jena interfaces is achieved.
+      Application accessing a Jena model can access a GVS-store and benefit
+      from version control with no or minimal changes.</para>
+    </section>
+
+    <section>
+      <title>Implementation: 6 weeks</title>
+
+      <para>The prototype is refactored for improved performance and
+      implementing the Jena integration.</para>
+    </section>
+
+    <section>
+      <title>Finalization of documentation: 2 weeks</title>
+
+      <para>The documentation written in parallel to planing and
+      implementation is completely reviewed.</para>
+    </section>
+
+    <section>
+      <title>Demo Applications: 3 weeks</title>
+
+      <para>The emphasis on the demo applications lies on simplicity and
+      elegance as well as a certain "geek-appeal".</para>
+    </section>
+
+    <section>
+      <title>Added value features: 3 weeks</title>
+
+      <para>Features outside the core like the "oh, yeah?" button are
+      implemented</para>
+    </section>
+
+    <section>
+      <title>Final report: 1 week</title>
+
+      <para>Report of achieved results, difficulties and effective and
+      possible deployment.</para>
+    </section>
+  </section>
+</article>

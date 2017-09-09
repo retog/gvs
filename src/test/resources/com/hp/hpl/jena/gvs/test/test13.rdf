@@ -1,0 +1,8 @@
+<rdf:RDF
+    xmlns:j.0="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+  <rdf:Description>
+    <j.0:mbox_sha1sum rdf:resource="urn:urn-5:foo"/>
+    <j.0:mbox rdf:resource="urn:urn-5:wZYmvgNBO1l9IxZhm3wvX+DXqdI="/>
+  </rdf:Description>
+</rdf:RDF>

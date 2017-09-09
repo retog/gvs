@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/2001/REC-xhtml11-20010531/DTD/xhtml11-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>About GVS</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/gvs" />
+    <link rel="shortcut icon" type="image/x-icon" href="/application/images/favicon.ico" />
+</head>
+<body onload="">
+<h1>
+  <a href="http://www.hp.com/"><img src="images/hpc60_topnav_hp_logo" width="63" height="53" alt="hp.com home" /></a>
+  About This Site
+</h1>
+
+<div style="width: 70%; margin-left: 5%">
+<p>
+HP have set up this site to enable anyone who wishes to assist 
+with our research into provenance and versioning of Semantic Web
+data to contribute such public data for
+
+<ol>
+<li>other users to explore as they see fit</li>
+<li>exercising our implementation on wild data</li>
+</ol>
+</p>
+
+<p>
+While we are grateful for all contributions,
+we cannot make any warranties whatsoever 
+regarding any aspect of
+our storage of your data in this way.
+Thus, before placing your data on this site,
+please make sure that you are aware of, and agree to, the following:
+
+<ol>
+<li>We cannot and do not promise to store your data 
+for any period of time; it may, therefore, be removed, 
+deleted or otherwise destroyed at any moment and for any 
+reason, entirely at our discretion.
+</li>
+
+<li>
+We do not restrict access to your data.
+Practically speaking, therefore, your data may  be accessed
+and copied by anyone without restriction and without regard
+to any copyright you or anyone else may hold in it, or the 
+secrecy of any of the content it records.  
+In hosting this store we are not
+seeking to authorise illegal copying or dissemination of data.
+Accordingly, please do not put your data in the store unless
+you are happy for it to be copied and otherwise disseminated
+without fetter.
+</li>
+
+</ol>
+</p>
+</div>
+
+<h1>Graph Versioning System</h1>
+
+<h2>What is GVS?</h2>
+
+<p>GVS allows persistent storage of RDF graphs, keeping track of provenance
+(which source supplied the statements) and history (which statements were
+added to/removed from the graph and when). Retrievals can specify unions
+over multiple sources and points in time.
+</p>
+
+<p>An instance of GVS is usable directly through it's Java API,
+remotely through a RESTfull HTTP interface, or using an AJAX
+Web-Application.
+</p>
+
+<p>GVS is experimental software intended for research purposes as
+part of the <a href="http://www.jena.sourceforge.net">Jena</a> family.
+</p>
+
+<h2 id="working">How does it work?</h2>
+
+<p>Basing on the concept of 
+<a href="http://ebiquity.umbc.edu/paper/html/id/240/">RDF Molecules</a>
+GVS splits every graph into components.
+A metamodel contains the information about which source is asserting
+which component during which periods.
+</p>
+
+<h2>Where's the source?</h2>
+
+<p>You can check out the module 'gvs' from the CVS repository at
+:pserver:anonymous@jena.cvs.sourceforge.net:/cvsroot/jena.
+More information on how to access the CVS repository can be
+found <a href="https://sourceforge.net/cvs/?group_id=40417">here</a>.
+</p>
+
+<h2>What is this Web-Site?</h2>
+
+<p>This site hosts a public GVS-Store. You can open an account
+and become a source. Accounts are weakly password-protected.
+</p>
+
+<h2 id="password">Forgot/modify password?</h2>
+
+<p>If you forgot your password or want to change it,
+reopen the account: if your username and email match
+the existing account, the password will be reset after you 
+click on the confirmation link sent by email.
+</p>
+
+<h2>Contact</h2>
+
+<p>Questions can be sent to the <a href="mailto:jena-dev@yahoogroups.com">Jena-Dev Mailing list</a> 
+with subject starting with <strong>[GVS]</strong> or directly to <a href="mailto:chris.dollin@hp.com">Chris Dollin</a> 
+and to <a href="mailto:reto@gmuer.ch">Reto Bachmann-Gmür</a>.</p>
+
+<div>
+<a href="/application/gvs-browser">Back to the GVS-Browser</a>
+</div>
+
+<div id="footer" class="small">
+    <div>
+    <a href="http://validator.w3.org/check?uri=referer">
+    <img src="/application/images/valid-xhtml11"
+         alt="Valid XHTML 1.1" height="31" width="88" /></a>
+    </div>
+	
+    <div id="copyright" class="small"> 
+    &copy; 2006 - 2007 Hewlett-Packard Development Company, L.P. 
+    </div>
+</div> 
+</body>
+</html>

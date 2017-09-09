@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/2001/REC-xhtml11-20010531/DTD/xhtml11-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>GVS: Create account</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/gvs" />
+		<link rel="shortcut icon" type="image/x-icon" href="/application/images/favicon.ico" />
+		<script type="text/javascript">
+			function verifyPassword() {
+				if (document.getElementById("password").value
+					!= document.getElementById("password2").value) {
+					alert("password do not match");
+					return false;
+				} else {
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body onload="">
+		<h1><a href="http://www.hp.com/"><img src="images/hpc60_topnav_hp_logo" width="63" height="53" alt="hp.com home"  /></a>
+		Create GVS Account</h1>
+		<h2>Share and revise your world view</h2>
+		
+        <p>If you're a human (or a qualified robot) we would like you to be able 
+        to log in and start adding triples to enlarge this gvs multiverse. 
+        </p>
+		
+        <p>All you need to do is is fill out the form below. We will send you 
+        an email to activate the account.
+		</p>
+		
+        <h3>About security and privacy</h3>
+		
+        <p><strong>Note</strong> that your email address and your password 
+        are encrypted using the sha1-algorithm and stored in a graph in GVS-Service. 
+        Currently, these encrypted strings are publicly accessible. 
+        
+        <i>This means that your password is not safe against dictionary attacks 
+        and that a person having your email address can find out that you registered 
+        with this service. </i>
+        
+        The email address itself is only used for the sending of a single verification 
+        email and is not stored.</p>
+
+		<p>Also note that all the triples you add to this GVS-Service, either by 
+        entering them directly, through an application, or by initiating their 
+        aggregation on the web, <i>will be publicly accessible</i>.
+        While they can be removed-at-time-T from the graph they cannot 
+        be <i>completely</i> removed as they will always be accessible through 
+        old versions of the graph.
+        </p>
+
+		<div id="login" class="simpleForm">
+			<form action="/meta/account-manager" method="post">
+				<label for="username">Username</label><input type="text" name="username" /><br/>
+				<label for="password">Password</label><input type="password" name="password" id="password"/><br/>
+				<label for="password">re-type password</label><input type="password" name="password2" id="password2"/><br/>
+				<label for="email">Email</label><input type="text" name="email" /><br/>
+				<input type="submit" onclick="return verifyPassword()" value="Create account" />
+			</form>
+		</div>
+		<div>
+			<a href="/application/gvs-browser">Back to the GVS-Browser</a>
+		</div>
+		<div id="footer" class="small">
+		<div>
+		    <a href="http://validator.w3.org/check?uri=referer"><img
+		        src="/application/images/valid-xhtml11"
+		        alt="Valid XHTML 1.1" height="31" width="88" /></a>
+		</div>
+		
+
+		<div id="copyright" class="small">
+            &copy; 2006 - 2007 Hewlett-Packard Development Company, L.P. 
+        </div>
+		</div> 
+	</body>
+</html>

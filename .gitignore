@@ -1,0 +1,8 @@
+bin
+build
+testing
+example-store
+target
+.project
+.settings/
+.classpath

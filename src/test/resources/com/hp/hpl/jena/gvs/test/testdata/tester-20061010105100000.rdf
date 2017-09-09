@@ -1,0 +1,34 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:db="http://discobits.org/ontology#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:auth="http://wymiwyg.org/ontologies/authorization#" xmlns:addr="http://wymiwyg.org/ontologies/foaf/postaddress#" xmlns:role="http://wymiwyg.org/ontologies/foaf/role#" xmlns:foafex="http://wymiwyg.org/ontologies/foaf/extensions#" xmlns:mp="http://wymiwyg.org/ontologies/mailpush#">
+  <db:DiscoBit rdf:about="http://localhost:8585/titledContent">
+    <rdf:type rdf:resource="http://discobits.org/ontology#TitledContent"/>
+    <db:components>
+      <rdf:Seq>
+        <rdf:li>
+          <db:PositionedDiscoBit>
+            <db:representedProperty rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+            <db:contained>
+              <db:DiscoBit rdf:about="http://localhost:8585/titledContent-title">
+                <rdf:type rdf:resource="http://discobits.org/ontology#XHTMLInfoDiscoBit"/>
+                <db:infoBit rdf:parseType="Literal">
+                big title
+                </db:infoBit>
+              </db:DiscoBit>
+             </db:contained>
+          </db:PositionedDiscoBit>
+        </rdf:li>
+        <rdf:li>
+          <db:PositionedDiscoBit>
+            <db:contained>
+              <db:DiscoBit>
+                <rdf:type rdf:resource="http://discobits.org/ontology#XHTMLInfoDiscoBit"/>
+                <db:infoBit rdf:parseType="Literal">
+and this <span xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline;">looks</span> like content<em xmlns="http://www.w3.org/1999/xhtml" xmlns:ns0="http://wymiwyg.org/ontologies/transaction#" xmlns:ns1="http://discobits.org/ontology#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> </em>
+                </db:infoBit>
+              </db:DiscoBit>
+            </db:contained>
+          </db:PositionedDiscoBit>
+        </rdf:li>
+      </rdf:Seq>
+    </db:components>
+  </db:DiscoBit>
+</rdf:RDF>

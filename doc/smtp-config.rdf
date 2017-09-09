@@ -1,0 +1,19 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:ns2="http://gvs.hpl.hp.com/ontologies/http-listener#"
+	 xmlns:ns0="http://jena.hpl.hp.com/gvs/aggregator#"
+	 xmlns:ns1="http://gvs.hpl.hp.com/ontologies/services#"
+	 xmlns:wam="http://gvs.hpl.hp.com/ontologies/web-account-manager#"
+	>
+	
+<!--  activate with something like: 
+GVSTool assert -F ./smtp-config.rdf -S /path/to/store -I http://gvs.hpl.hp.com/default-config# -->
+  <rdf:Description rdf:about="http://gvs.hpl.hp.com/default/config/http#">
+    <wam:webAccountManagerConfiguration>
+    	<wam:WebAccountManagerConfiguration>
+    		<wam:smtpServer>adslmail.deep.ch</wam:smtpServer>
+    		<wam:fromAddress>gvs@gmuer.ch</wam:fromAddress>
+    	</wam:WebAccountManagerConfiguration>
+    </wam:webAccountManagerConfiguration>
+  </rdf:Description>
+
+</rdf:RDF>

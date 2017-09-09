@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/2001/REC-xhtml11-20010531/DTD/xhtml11-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Dynamic Graph Loader and Renderer</title>
+		<script type="text/javascript" src="/application/scripts/gvs-browser">
+		</script>
+		<script type="text/javascript" src="/application/scripts/gvs">
+		</script>
+		<script type="text/javascript" src="/application/scripts/linking-serializer">
+		</script>
+		<script type="text/javascript">
+		var gvsBrowser = new GVSBrowser();
+		</script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/gvs" />
+		<link rel="shortcut icon" type="image/x-icon" href="/application/images/favicon.ico" />
+		<!-- ajar stuff -->
+		<script src="/application/scripts/disco/util.js" type="text/javascript"></script>
+		<script src="/application/scripts/disco/uri.js" type="text/javascript"></script>
+		<script src="/application/scripts/disco/term.js" type="text/javascript"></script>
+		<script src="/application/scripts/disco/match.js" type="text/javascript"></script>
+		<script src="/application/scripts/disco/rdfparser.js" type="text/javascript"></script>
+		<script src="/application/scripts/disco/identity.js" type="text/javascript"></script>
+		<script src="/application/scripts/disco/log.js" type="text/javascript"></script>
+				
+	</head>
+	<body onload="gvsBrowser.init()">
+	
+		<div id="head">
+			<div>
+				<h1><a href="http://www.hp.com/"><img src="images/hpc60_topnav_hp_logo" width="63" height="53" alt="hp.com home"  /></a>
+				GVS Browser</h1>
+				<p><em>A demonstrator of the Graph Versioning System</em></p>	
+			</div>
+			<div id="account">
+			<div id="login" class="small">
+				<h2>Login</h2>
+				<form action="/meta/account-manager" method="post">
+					<label for="username">Username</label><input type="text" name="username" /><br/>
+					<label for="password">Password</label><input type="password" name="password" /><br/>
+					<input type="submit" value="login"/>
+				</form>
+				<a href="/application/create-account">Create account</a><br/>
+				<a href="/application/about-gvs#password">Forgot password?</a>
+			</div>
+			<div id="logout" class="small">
+				<a href="#" onclick="gvsBrowser.logout()">Log Out</a>
+			</div>
+		</div>
+		</div>
+		<p>Displaying <span id="selectedTriplesCount">X</span> triples in the context of 
+			<a href="#resourceControl" onclick="document.getElementById('resourceControl').style.display = ''">
+			<span id="selectedResourcesText">X</span> 
+			</a> trusting  <a href="#sourcesControl" onclick="document.getElementById('sourcesControl').style.display = ''">
+			<span id="selectedSourcesText">X</span>
+			</a>as per  <a href="#dateControl" onclick="document.getElementById('dateControl').style.display = ''">
+			<span id="selectedDate">X</span>
+			</a> using the template <a href="#templateControl" onclick="document.getElementById('templateControl').style.display = ''">
+			"<span id="selectedTemplate">X</span>"
+			</a>
+		</p>
+		<p id="actionsSection">
+			Actions:
+			<ul>
+				<li id="seeAlsoAction"><a href="#" id="seeAlsoLink">Trust the <span id="seeAlsoCountText">X documents</span> refenced with rdfs:seeAlso</a></li>
+				<li id="editAction"><a href="#" class="editActionLink">Edit the source <span class="editableSourceName"></span></a></li>
+			</ul>
+		</p>
+		<div id="resourceControl" class="closeable">
+			<h2>Resource</h2>
+			<div id="resourceArea">
+				Get information about <br/>
+				<input type="radio" name="resourceCriterion" value="any" checked="checked" onclick="gvsBrowser.setResourceFieldsDisabled(this.checked); gvsBrowser.sourceDefinitionChanged()"/>All known resources<br/>
+				<div>
+					<input  style="float: left" type="radio" name="resourceCriterion" value="selected" id="resourceSelected" 
+					onclick="gvsBrowser.setResourceFieldsDisabled(!this.checked); if (getChildrenByClass(document.getElementById('resourceRows'), 'resourceField')[0].value != '') gvsBrowser.sourceDefinitionChanged()"/> 
+					<div style="margin-left: 2em">
+						<div id="resourceRows">
+							<div class="resourceRow">
+								<input type="text" class="resourceField" size="70" disabled="disabled" onchange="gvsBrowser.sourceDefinitionChanged()"/>
+							</div>
+						</div>
+						<a href="#" onclick="gvsBrowser.addResourceRow()"><img src="/application/images/plus" /></a>
+						<a href="#" onclick="gvsBrowser.removeResourceRow()"><img src="/application/images/minus" id="removeResourceRowLink"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sourcesControl" class="closeable">
+			<h2>Sources</h2>
+			<p>Trusting the following sources:</p>
+			<div id="sourceSeletion"  style="max-height:150px;  overflow:auto; border:0px inset; padding: 0px; text-align:left" />
+		</div>
+		<div id="dateControl" class="closeable">
+			<h2>Date</h2>
+			<p>At the following point in time</p>
+			<div id="dateSelection">
+				<input id="previousButton" type="button" value="&lt;&lt;" disabled="disabled" onclick="gvsBrowser.previous()"/>
+				<input type="text" id="dateField" onchange="gvsBrowser.setDateString(this.value)" size="28"/>
+				<input id="followingButton" type="button" value="&gt;&gt;" disabled="disabled" onclick="gvsBrowser.following()"/>
+			</div>
+		</div>
+		<div id="templateControl" class="closeable">
+			<h2>Template</h2>
+			<div id="styleSelection">
+				Display the result with the following template: <select onchange="gvsBrowser.setTemplate(this.value)">
+					<option>combined</option>
+					<option>show-xml-source</option>
+					<option>item-viewer</option>
+					<option>foaf-viewer</option>
+					<option>discobits</option>
+				</select>
+			</div>
+		</div>
+		<div id="refreshArea">
+			Refresh: <input id="autoRefresh" type="checkbox" onclick="document.getElementById('refreshButton').disabled = this.checked" checked="checked"/>Auto 
+			<input id="refreshButton" type="button" value="Refresh" disabled="disabled" onclick="gvsBrowser.refresh()"/>
+		</div>
+		<h2>View</h2>
+		<div id="dataArea" style="max-height:700px;  overflow:auto; border:2px inset; padding: 0px; text-align:left;" />
+		<p><a href="" id="dataLink">View result as single linkable page</a></p>
+		
+		<div id="link">
+			<a href="about-gvs">About GVS</a>
+		</div>
+		<div id="footer" class="small">
+		<div>
+		     <a href="http://validator.w3.org/check?uri=referer"><img
+		        src="/application/images/valid-xhtml11"
+		        alt="Valid XHTML 1.1" height="31" width="88" /></a> 
+		</div>
+		
+		
+
+		<div id="copyright" class="small"> &copy; 2006 - 2007 Hewlett-Packard Development Company,
+		  L.P. </div>
+		</div> 
+	</body>
+</html>

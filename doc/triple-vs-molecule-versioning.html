@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Triple oriented vs. molecule oriented versioning</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20061218;11002300">
+	<META NAME="CHANGED" CONTENT="20061218;11060900">
+	<STYLE TYPE="text/css">
+	<!--
+		PRE.n3 { background: #eeeeee; border: 1.00pt solid #000066; padding: 0.05cm; color: #000000 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1>Triple oriented vs. molecule oriented versioning</H1>
+<P>Finding the right level of granularity for versioning. 
+</P>
+<H2>Triple oriented approach</H2>
+<P>The idea is to add the versioning information to each triple. This
+could be implemented by adding two extra columns to the table in
+which the triples are stored, one containing the revision number from
+which the triple is valid and one containing the number of the first
+revision in which the triple is no longer contained (the value of
+this column may be null).</P>
+<P>An implemtational consequence of the triple based approach is that
+anonymous nodes can keep an identity across versions, i.e. the
+identifier in the field of the table of triples. A triple oriented
+versioning system may or may not expose this identity, depending on
+this the possible ways to keep the number of recorded changes low
+are:</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0cm">Store the transactions made
+	through a model API or with a query[?] language and assume the
+	application won't make unnecessary revocations/re-assertions 
+	</P>
+	<LI><P>An algorithm to find a matching from anonymous resources in
+	the old version to anonymous resources in the new version so that
+	the number of revocations/re-assertions is minimal 
+	</P>
+</OL>
+<P>The approach discussed here is the first one, this approach allows
+the API user to pint to an anonymous resource across different
+versions. 
+</P>
+<H2>Molecule based approach</H2>
+<P>Molecules are elements of a lossless decomposition of a graph,
+i.e. a graph can be decomposed into molecules without loosing
+information and without assigning a cross-component identity to
+bnodes. To such a molecule the information&nbsp;</P>
+<H2>Example</H2>
+<P>In this example &quot;graph over time&quot; (GOT) the old version
+like this:</P>
+<PRE CLASS="n3">&lt;http://examle.org/content&gt; a foaf:PersonalProfileDocumet.
+&lt;http://examle.org/content&gt; dc:modified &quot;2001-10-13&quot;.
+        [ a foaf:Person;
+        foaf:firstName &quot;Chris&quot;;
+        foaf:lastName &quot;Dollin&quot;;
+        foaf:nickName &quot;Electric Hedgehog&quot;
+        ] 
+        [ a foaf:Person;
+        foaf:firstName &quot;Reto&quot;;
+        foaf:lastName &quot;Gm&uuml;r&quot;
+        ]
+        </PRE><P>
+and the new one:</P>
+<PRE CLASS="n3">&lt;http://examle.org/content&gt; a foaf:PersonalProfileDocumet.
+&lt;http://examle.org/content&gt; dc:modified &quot;2006-12-15&quot;.
+        [ a foaf:Person;
+        foaf:firstName &quot;Chris&quot;;
+        foaf:lastName &quot;Dollin&quot;;
+        foaf:nickName &quot;Perikles triumphant&quot;
+        ] 
+        [ a foaf:Person;
+        foaf:firstName &quot;Reto&quot;;
+        foaf:lastName &quot;Bachmann-Gm&uuml;r&quot;
+        ]
+        </PRE><P>
+<BR>With the triple oriented approach the changes that happen in the
+database reflect the transactions done on Model. Some java code
+modifying the Model could have changed the properties of existing
+anonymous resources in which case in the database 3 statements get
+invalidated for the new version while 3 other statements start to be
+valid. If however the program would have imported the new version
+from a file and update the model without additional knowledge or
+guessing, all properties of the two anonymous resources in the old
+version would have been invalidated and a total of 8 statements
+added.<BR><BR>With the molecule based approach the validity
+information stored in the meta-model refers to the following
+molecules:</P>
+<PRE CLASS="n3">&lt;http://examle.org/content&gt; a foaf:PersonalProfileDocumet.
+&lt;http://examle.org/content&gt; dc:modified &quot;2006-12-15&quot;.
+</PRE><PRE CLASS="n3">
+&lt;http://examle.org/content&gt; dc:modified &quot;2001-10-13&quot;.
+</PRE><PRE CLASS="n3">
+[ a foaf:Person;
+        foaf:firstName &quot;Chris&quot;;
+        foaf:lastName &quot;Dollin&quot;;
+        foaf:nickName &quot;Electric Hedgehog&quot;
+] 
+</PRE><PRE CLASS="n3">
+[ a foaf:Person;
+        foaf:firstName &quot;Reto&quot;;
+        foaf:lastName &quot;Gm&uuml;r&quot;
+]
+</PRE><PRE CLASS="n3">
+[ a foaf:Person;
+        foaf:firstName &quot;Chris&quot;;
+        foaf:lastName &quot;Dollin&quot;;
+        foaf:nickName &quot;Perikles triumphant&quot;
+] 
+</PRE><PRE CLASS="n3">
+[ a foaf:Person;
+        foaf:firstName &quot;Reto&quot;;
+        foaf:lastName &quot;Bachmann-Gm&uuml;r&quot;
+]</PRE><P>
+In terms of total number of triples stored the molecule approach is
+as high as the worst case in the triple oriented approach, the number
+of component assertions/revocation is however equals to best case in
+the triple oriented approach, 3 things get revoked and 3 asserted.
+The minimal changes to the database possible with the triple oriented
+approach relies on the external knowledge of the programmer or user
+(which would reflect in different changes depending of whether Reto
+changed his name or one Reto left and another one joined). <BR>If the
+two anonymous resource would have constant inverse functional
+properties in the two versions the recorded changes about the
+anonymous resources would be smaller:</P>
+<UL>
+	<LI><P>revoked: 
+	</P>
+	<PRE CLASS="n3">[       foaf:mbox &lt;chris.dollin@hp.com&gt;;
+        foaf:nickName &quot;Electric Hedgehog&quot;
+]
+</PRE><PRE CLASS="n3">
+[       foaf:mbox &lt;reto@gmuer.ch&gt;;
+        foaf:lastName &quot;Gm&uuml;r&quot;
+]</PRE>
+	<LI><P>asserted: 
+	</P>
+	<PRE CLASS="n3">[       foaf:mbox &lt;chris.dollin@hp.com&gt;;
+        foaf:nickName &quot;Perikles triumphant&quot;
+]
+</PRE><PRE CLASS="n3">
+[       foaf:mbox &lt;reto@gmuer.ch&gt;;
+        foaf:lastName &quot;Bachmann-Gm&uuml;r&quot;
+]</PRE>
+</UL>
+<H2>Different usage scenarios</H2>
+<H3>Synchronization</H3>
+<P>Both approaches allow the transfer of changes to a remote system.
+For the triple oriented approach two keep the data transfered low the
+anonymous node have constant identifier across the systems, this is
+not a problem if one system is a read-only copy of the other but in
+the situation that both model can be idenpendently changed the result
+of synchronization of two true models could be a false one.</P>
+<H3>Aggregation</H3>
+<P>An aggregator records the changes from different sources, this is
+possible with both approaches as long as with the triple based
+approach the b-node IDs are globally unique, if different sources
+assert the same information the aggregator has to store both b-node
+ids.</P>
+<H3>Resource oriented API</H3>
+<P>The Java code</P>
+<PRE>Model model = ModelFactory.createDefaultModel();
+Resource r1 = model.createResource(FOAF.Person);
+Resource r2 = model.createResource(FOAF.Person);</PRE><P>
+creates a non-lean expressing the same content as the one created by</P>
+<PRE>Model model = ModelFactory.createDefaultModel();
+Resource r1 = model.createResource(FOAF.Person);</PRE><P>
+a dynamic merging however, would probably break the expectations of
+the user of the OO language. As long as the java objects life they
+cannot be threated as existential variables but must be threated as
+things with own identity. With the triple oriented approach this is
+straight forward as the different object maps to bNode ids, the java
+instances can be stored losslessly in the system. <BR>A molecule
+based stored guarantees to keep the asserted content, redundant
+information may and ideally should be removed so that the returned
+graphs are lean. The space of Java instances can be seen as a scratch
+board which converts to RDF when it is committed, the framework could
+be designed so to discourage the programmer keeping references to
+(anonymous) resources between transaction and/or switch the objects
+in a &quot;read-only&quot; mode after committing.</P>
+<H3>Storing named graphs</H3>
+<P>A triple oriented store may well store multiple named graphs the
+graph in which a triple is contained could be an additional field in
+the database table. A triple may thus be stored several times and be
+considered distinct depending on the containing graph, the same bNode
+id never appears in two graphs.<BR>The GVS-Concept of <I>Source</I>
+is a named graph changing over time, a molecule may be asserted by
+several sources. Isomorphic molecules are never stored twice which
+makes it easy and fast to return the union of several overlapping
+models.</P>
+<H3>Diffs</H3>
+<P>From the molecule-based store it is trivial to extract diffs which
+do not depend on b-node ids. The advantage of such a diff is that it
+has a context independent meaning, i.e. knowing the meaning of the
+named resources is sufficient to conceive the meaning. For instance a
+diff depending on b-node ids can only reasonable be signed with
+reference to the context of the resource in the compared models.</P>
+<H2>Conclusions</H2>
+<P>The triple oriented versioning approach suits nicely into a
+scenario where anonymous resource are threated similarly to named
+resources, i.e where graphs are not leanified and a API user can keep
+references to anonymous resources. The molecule oriented approach is
+to be preferred when the relevant information is the expressed
+content according to RDF-Semantics and where there is no way aside
+the expressed meaning expressed by two versions of a graph to
+associated anonymous resources as being a time variing resource. 
+</P>
+</BODY>
+</HTML>

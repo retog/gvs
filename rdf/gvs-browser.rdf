@@ -1,0 +1,27 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns="http://gvs.hpl.hp.com/ontologies/gvs-browser#"
+	xml:base="http://gvs.hpl.hp.com/ontologies/gvs-browser">
+
+
+
+
+	<owl:Class rdf:ID="StartResource">
+		<rdfs:label xml:lang="en">StartResource</rdfs:label>
+		<skos:definition xml:lang="en">
+			A resource suggested as starting point for gvs-browsing.
+		</skos:definition>
+		<rdfs:isDefinedBy rdf:resource="" />
+	</owl:Class>
+
+	<owl:Class rdf:ID="RecommendedSource">
+		<rdfs:label xml:lang="en">RecommendedSource</rdfs:label>
+		<skos:definition xml:lang="en">
+			A recommended source
+		</skos:definition>
+		<rdfs:isDefinedBy rdf:resource="" />
+	</owl:Class>
+
+</rdf:RDF>

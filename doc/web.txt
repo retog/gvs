@@ -1,0 +1,23 @@
+The package com.hp.hpl.jena.gvs.web provides a restfull intervace to a gvs-store.
+
+Retrieving versions:
+
+A version of a graph from source with url SOURCE can be retrieved either dereferencing SOURCE with an 
+optional GET-Parameter "moment" or by invoking a service-URL ("/gvs") passing SOURCE as value of the get parameter 
+"source". The second method allows multiple "source"-parameter for getting the union of the graph-version
+of multiple sources.
+
+
+Adding versions: (TODO)
+
+A new version of a graph can be set with a PUT request at the URL of the source.
+
+
+
+Retreiving modification-dates: (TODO)
+
+Nearby-dates of modification are returned with the http-response header X-GVS-Previous and  
+X-GVS-Next, the format is the W3C subset of ISO 8601.
+
+At the URL-Path /gvs-modification-dates an inverse chronological list of modification dates can be 
+retreived using the same parameter as for the /gvs service

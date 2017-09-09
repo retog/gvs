@@ -1,0 +1,93 @@
+<rdf:RDF
+		xmlns:j.0="http://tkgeveno/"
+		xmlns:j.1="http://ownpfrwy/"
+		xmlns:j.2="http://mqmavfuv/"
+		xmlns:j.3="http://xmlns.com/foaf/0.1/"
+		xmlns:j.4="http://vgmhokfm/"
+		xmlns:j.5="http://lrpkgmpj/"
+		xmlns:j.6="http://tqmoqqrb/"
+		xmlns:j.7="http://rdetndhu/"
+		xmlns:j.8="http://bknysrrp/"
+		xmlns:j.9="http://jstfqiiq/"
+		xmlns:j.10="http://ovgsqalg/"
+		xmlns:j.11="http://klefktka/"
+		xmlns:j.12="http://wnumrnjs/"
+		xmlns:j.14="http://usihhmgq/"
+		xmlns:j.13="http://eeywhsul/"
+		xmlns:j.16="http://qlbptbaj/"
+		xmlns:j.15="http://qtqhlhnw/"
+		xmlns:j.17="http://fwysxctu/"
+		xmlns:j.18="http://kgyjrqde/"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:j.19="http://gvewweit/"
+		xmlns:j.20="http://tttgdcxd/"
+		xmlns:j.21="http://lusbsvwh/" >
+	<rdf:Description rdf:nodeID="A0">
+		<j.3:mbox rdf:nodeID="A1"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A2">
+		<j.12:ngjd rdf:nodeID="A3"/>
+		<j.6:nsla rdf:nodeID="A4"/>
+		<j.21:rjqe rdf:nodeID="A2"/>
+		<j.7:jatf rdf:nodeID="A4"/>
+		<j.9:xscd rdf:resource="urn:urn-5:vbt-S6KCojp0KfytoXhJRR7p+lw="/>
+		<j.5:nwva rdf:nodeID="A5"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="urn:urn-5:k6xdN57JOSssf7vccbADW7ClitU=">
+		<j.18:cyur rdf:resource="urn:urn-5:vbt-S6KCojp0KfytoXhJRR7p+lw="/>
+		<j.15:salw rdf:nodeID="A6"/>
+		<j.14:mxni>ycriyiipjcgnhdyna rxgyerrkdnrdxidqwn pqmftjaeqddubsmgkcwcymfnrjsqdicaavlksfhxl ntmkijedesr loikfwjllvdihokvygegyxwm </j.14:mxni>
+		<j.16:wbju rdf:nodeID="A1"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1">
+		<j.10:voet rdf:resource="urn:urn-5:vbt-S6KCojp0KfytoXhJRR7p+lw="/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A6">
+		<j.8:unes rdf:resource="urn:urn-5:k6xdN57JOSssf7vccbADW7ClitU="/>
+		<j.18:cyur rdf:nodeID="A6"/>
+		<j.4:mlgi rdf:nodeID="A4"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A3">
+		<j.11:yauu></j.11:yauu>
+		<j.13:pyyb rdf:nodeID="A6"/>
+		<j.10:voet rdf:nodeID="A3"/>
+		<j.12:ngjd rdf:nodeID="A4"/>
+		<j.15:salw rdf:nodeID="A7"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A4">
+		<j.15:salw>raahcgpoqs auskfixshblsuitolqvwsvytfbbwmvcnoitjaglcincvi </j.15:salw>
+		<j.0:gpkv>mruwfapcq llylpkilvgabslauuckvkrtjviafwfcsa nigccquwytiisnbujtmpdbgmpakeauohruygir</j.0:gpkv>
+		<j.4:mlgi rdf:nodeID="A5"/>
+		<j.18:cyur rdf:resource="urn:urn-5:k6xdN57JOSssf7vccbADW7ClitU="/>
+		<j.20:ejvh rdf:nodeID="A4"/>
+		<j.19:cbde rdf:resource="urn:urn-5:vbt-S6KCojp0KfytoXhJRR7p+lw="/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A8">
+		<j.21:rjqe rdf:nodeID="A6"/>
+		<j.17:mbsu rdf:nodeID="A2"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A9">
+		<j.8:unes rdf:nodeID="A4"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A10">
+		<j.3:mbox rdf:nodeID="A4"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A5">
+		<j.12:ngjd rdf:nodeID="A5"/>
+		<j.20:ejvh rdf:nodeID="A4"/>
+		<j.13:pyyb rdf:nodeID="A3"/>
+		<j.3:mbox_sha1sum rdf:nodeID="A11"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A7">
+		<j.19:cbde rdf:resource="urn:urn-5:k6xdN57JOSssf7vccbADW7ClitU="/>
+		<j.20:ejvh rdf:nodeID="A12"/>
+		<j.2:slac rdf:resource="urn:urn-5:k6xdN57JOSssf7vccbADW7ClitU="/>
+	</rdf:Description>
+	<rdf:Description rdf:about="urn:urn-5:vbt-S6KCojp0KfytoXhJRR7p+lw=">
+		<j.4:mlgi rdf:nodeID="A13"/>
+		<j.1:cqto rdf:nodeID="A3"/>
+		<j.14:mxni>xaeqtivveyltionapcfoudlqgg xkurfcclyvjgclqpesftfedyutbpcdcebwuypwsewttnrusg qimcvjiibdpqnfsdndhgokhrpmholubdhwqbv </j.14:mxni>
+		<j.3:interest rdf:nodeID="A11"/>
+		<j.11:yauu rdf:nodeID="A14"/>
+	</rdf:Description>
+</rdf:RDF>

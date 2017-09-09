@@ -1,0 +1,69 @@
+<rdf:RDF
+    xmlns:j.0="http://asbhymqs/"
+    xmlns:j.1="http://xmlns.com/foaf/0.1/"
+    xmlns:j.2="http://xkvxlvdf/"
+    xmlns:j.3="http://jcuqrxhm/"
+    xmlns:j.4="http://keonhcph/"
+    xmlns:j.5="http://jankthpn/"
+    xmlns:j.6="http://etovugvx/"
+    xmlns:j.7="http://rsrcjucs/"
+    xmlns:j.8="http://lrilupvo/"
+    xmlns:j.9="http://ecdgtteb/"
+    xmlns:j.10="http://kpgoyxqm/"
+    xmlns:j.11="http://sepeacwd/"
+    xmlns:j.12="http://dgfnkqea/"
+    xmlns:j.13="http://ovavyrnm/"
+    xmlns:j.14="http://jpkndwbg/"
+    xmlns:j.15="http://jdqwauwv/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.16="http://vlpgakdd/"
+    xmlns:j.17="http://allvkdrq/"
+    xmlns:j.18="http://wkcgcjer/" >
+  <rdf:Description rdf:nodeID="A0">
+    <j.18:oaky>vkftlcnj u isewymy qfycxcasnkbllrvmgegkmyiccbmtbiewxuvawtoybnyly gjgrwvunalywhlmyljffulqcuovhnyxegpg jvaresytajavqg svjjxcgrvnqswuqqfeyr </j.18:oaky>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.11:gqnj rdf:resource="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8="/>
+    <j.9:qcda rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+    <j.15:tcot rdf:nodeID="A2"/>
+    <j.16:cgax rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+    <j.10:wtis rdf:nodeID="A3"/>
+    <j.8:iipj rdf:nodeID="A2"/>
+    <j.1:mbox rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+    <j.13:rjsv rdf:nodeID="A3"/>
+    <j.9:qcda>yrmqdirudujglnaykdhopylctexwxwl </j.9:qcda>
+    <j.12:odov rdf:resource="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8=">
+    <j.14:daux rdf:nodeID="A1"/>
+    <j.1:homepage>qoiwg </j.1:homepage>
+    <j.5:cbje rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+    <j.10:wtis rdf:resource="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8="/>
+    <j.11:gqnj rdf:nodeID="A1"/>
+    <j.3:ewky rdf:nodeID="A1"/>
+    <j.17:cais rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <j.0:iffv rdf:resource="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8="/>
+    <j.5:cbje rdf:nodeID="A5"/>
+    <j.10:wtis rdf:resource="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8="/>
+    <j.2:dtun rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:urn-5:EEHqZ2D5v7MYXarc2wZMAwjknd4=">
+    <j.11:gqnj rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.15:tcot rdf:resource="urn:urn-5:mMGs310Mm7rNox4f0-nlKdPH5L8="/>
+    <j.1:mbox_sha1sum rdf:nodeID="A1"/>
+    <j.6:kwto rdf:nodeID="A1"/>
+    <j.16:cgax rdf:nodeID="A3"/>
+    <j.4:bsfp rdf:nodeID="A3"/>
+    <j.7:dlwc>jpynoujwwtbmmgxgdtjnlkkwykigpwghv jyyx exuigngevrsjjekxedlmdklccvrufeltt rkuvpbl </j.7:dlwc>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg=">
+    <j.17:cais rdf:nodeID="A3"/>
+    <j.1:mbox_sha1sum rdf:nodeID="A1"/>
+    <j.2:dtun rdf:resource="urn:urn-5:EEHqZ2D5v7MYXarc2wZMAwjknd4="/>
+    <j.12:odov rdf:resource="urn:urn-5:3PCeIea14ktuNPwV5qDNkNLH4lg="/>
+  </rdf:Description>
+</rdf:RDF>

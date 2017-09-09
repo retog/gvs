@@ -1,0 +1,97 @@
+<rdf:RDF
+    xmlns:j.0="http://xkgknxsp/"
+    xmlns:j.1="http://krspfdoj/"
+    xmlns:j.2="http://mvqtufwi/"
+    xmlns:j.3="http://xmlns.com/foaf/0.1/"
+    xmlns:j.4="http://etdlwgjh/"
+    xmlns:j.5="http://ddxkgnhu/"
+    xmlns:j.6="http://enarlmds/"
+    xmlns:j.7="http://whxxowdu/"
+    xmlns:j.8="http://jglmtxvr/"
+    xmlns:j.9="http://codblcyp/"
+    xmlns:j.10="http://xeldnvcw/"
+    xmlns:j.11="http://rmcgdxpi/"
+    xmlns:j.12="http://qjivfxet/"
+    xmlns:j.13="http://rakiwidb/"
+    xmlns:j.14="http://shypfvkd/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.16="http://pgcftxro/"
+    xmlns:j.15="http://ufunxeba/"
+    xmlns:j.17="http://jflkkqxj/"
+    xmlns:j.18="http://ijoykwyn/" >
+  <rdf:Description rdf:about="urn:urn-5:jXhX4-l+fz-dbnLoC3k3y+sKJaM=">
+    <j.2:vecr rdf:nodeID="A0"/>
+    <j.8:nqdd rdf:nodeID="A1"/>
+    <j.1:ubct rdf:nodeID="A2"/>
+    <j.1:ubct rdf:resource="urn:urn-5:jXhX4-l+fz-dbnLoC3k3y+sKJaM="/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <j.13:byay rdf:nodeID="A4"/>
+    <j.14:euio rdf:nodeID="A0"/>
+    <j.8:nqdd rdf:resource="urn:urn-5:jXhX4-l+fz-dbnLoC3k3y+sKJaM="/>
+    <j.0:fipm rdf:nodeID="A5"/>
+    <j.1:ubct rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <j.12:ycvy rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <j.11:gxoo rdf:nodeID="A1"/>
+    <j.14:euio rdf:nodeID="A10"/>
+    <j.6:pmxs rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <j.1:ubct rdf:resource="urn:urn-5:rQwV5qrxX4axiYikQHgNjVWkvLU="/>
+    <j.16:yamn></j.16:yamn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <j.4:uewa rdf:resource="urn:urn-5:jXhX4-l+fz-dbnLoC3k3y+sKJaM="/>
+    <j.7:oafa rdf:nodeID="A12"/>
+    <j.5:cqmo rdf:nodeID="A3"/>
+    <j.0:fipm rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <j.8:nqdd rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.11:gxoo rdf:nodeID="A9"/>
+    <j.18:owij rdf:nodeID="A1"/>
+    <j.2:vecr rdf:nodeID="A1"/>
+    <j.1:ubct rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <j.10:gujg rdf:nodeID="A9"/>
+    <j.3:mbox_sha1sum rdf:resource="urn:urn-5:FrlPwDiFTstPjQoM+xZkI8LMOkg="/>
+    <j.5:cqmo rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.9:ohfg rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:urn-5:FrlPwDiFTstPjQoM+xZkI8LMOkg=">
+    <j.15:prtd rdf:nodeID="A6"/>
+    <j.15:prtd rdf:resource="urn:urn-5:jXhX4-l+fz-dbnLoC3k3y+sKJaM="/>
+    <j.7:oafa rdf:nodeID="A15"/>
+    <j.1:ubct rdf:nodeID="A3"/>
+    <j.1:ubct rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <j.8:nqdd rdf:resource="urn:urn-5:jXhX4-l+fz-dbnLoC3k3y+sKJaM="/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.3:mbox rdf:nodeID="A3"/>
+    <j.16:yamn>emyrudcyycmejiydtwpsegxuathxt wdkmgyphvgjwxmvxapjikqbyeouqnccogweclkahkyhiwcnx dofvguyrhykxspjvtablbuekr emqirnkoagor gwpyvnpopyihqjhdspruhi lkktglcviwwwlmfklbfovugmdgdjrgltpdpsipwhkcqy qxcgcdo gmaaqeambqywvbpkerxjcsqfggcuijmvpplviatcwqommiqq btpmwvulubtleenqyyai nyjwgu axxkkf ioectwkwwmipfkpsr rdxhcgdu lroxfqgsmwgqcohbnpujkmmembqyqweqadyioo itndfamjytl cofjybbrqucchrsclbseywyfaxfirsfrtlxkogerlbhwxegtp </j.16:yamn>
+    <j.3:mbox_sha1sum>lluobrijwwapdxlhvorpcfenboolqhtvxdi </j.3:mbox_sha1sum>
+    <j.16:yamn rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <j.17:wfcb rdf:resource="urn:urn-5:FrlPwDiFTstPjQoM+xZkI8LMOkg="/>
+    <j.0:fipm rdf:nodeID="A8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <j.1:ubct rdf:nodeID="A5"/>
+    <j.3:mbox_sha1sum rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <j.9:ohfg rdf:nodeID="A13"/>
+  </rdf:Description>
+</rdf:RDF>

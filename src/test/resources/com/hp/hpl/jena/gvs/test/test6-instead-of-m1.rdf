@@ -1,0 +1,67 @@
+<rdf:RDF
+		xmlns:j.0="http://uwfbyugd/"
+		xmlns:j.1="http://xmlns.com/foaf/0.1/"
+		xmlns:j.2="http://qhupiofv/"
+		xmlns:j.3="http://xqokskgo/"
+		xmlns:j.4="http://cjkbjrue/"
+		xmlns:j.5="http://vathntkb/"
+		xmlns:j.6="http://mungfcvp/"
+		xmlns:j.7="http://ayjyoosd/"
+		xmlns:j.8="http://cumprpiu/"
+		xmlns:j.9="http://tcyfsrip/"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:j.10="http://rjmfxjdc/"
+		xmlns:j.11="http://ivvrnirc/"
+		xmlns:j.12="http://dicfrrko/"
+		xmlns:j.14="http://mhlrbxso/"
+		xmlns:j.13="http://fuqttyul/"
+		xmlns:j.15="http://vmaenfmf/" >
+	<rdf:Description rdf:about="urn:urn-5:zitzP3bD+bHkdPTxnWC-K2NYaeo=">
+		<j.10:jwpq rdf:nodeID="A0"/>
+		<j.12:jrvp rdf:resource="urn:urn-5:zitzP3bD+bHkdPTxnWC-K2NYaeo="/>
+		<j.1:mbox rdf:nodeID="A1"/>
+		<j.11:gvvg rdf:nodeID="A2"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1">
+		<j.1:mbox rdf:nodeID="A3"/>
+		<j.8:suvx rdf:nodeID="A4"/>
+		<j.6:tmca rdf:nodeID="A4"/>
+		<j.3:qfil rdf:nodeID="A4"/>
+		<j.6:tmca rdf:nodeID="A1"/>
+		<j.2:soyq rdf:nodeID="A1"/>
+		<j.1:mbox rdf:resource="urn:urn-5:zitzP3bD+bHkdPTxnWC-K2NYaeo="/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A5">
+		<j.9:uksw rdf:nodeID="A2"/>
+		<j.0:dysi rdf:nodeID="A1"/>
+		<j.4:wwkc></j.4:wwkc>
+		<j.1:homepage rdf:nodeID="A4"/>
+		<j.5:ydtx></j.5:ydtx>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A6">
+		<j.7:agbn rdf:nodeID="A4"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="urn:urn-5:MaY0mlvBhlrg43NwxJwy6vbRvXQ=">
+		<j.7:agbn rdf:nodeID="A6"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A0">
+		<j.14:rppw rdf:nodeID="A6"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A4">
+		<j.15:umhv rdf:nodeID="A4"/>
+		<j.1:homepage rdf:resource="urn:urn-5:zitzP3bD+bHkdPTxnWC-K2NYaeo="/>
+		<j.1:mbox_sha1sum rdf:nodeID="A1"/>
+		<j.2:soyq rdf:nodeID="A0"/>
+		<j.13:guxp rdf:resource="urn:urn-5:zitzP3bD+bHkdPTxnWC-K2NYaeo="/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A7">
+		<j.15:umhv rdf:nodeID="A5"/>
+		<j.2:soyq rdf:nodeID="A4"/>
+		<j.9:uksw rdf:resource="urn:urn-5:zitzP3bD+bHkdPTxnWC-K2NYaeo="/>
+		<j.9:uksw rdf:nodeID="A4"/>
+		<j.5:ydtx rdf:nodeID="A0"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="urn:urn-5:Jfa58H-fMKg+VXeqlnOryn4sixU=">
+		<j.3:qfil rdf:nodeID="A1"/>
+	</rdf:Description>
+</rdf:RDF>

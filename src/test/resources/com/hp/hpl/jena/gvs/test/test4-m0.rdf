@@ -1,0 +1,59 @@
+<rdf:RDF
+		xmlns:j.0="http://ymdforma/"
+		xmlns:j.1="http://evicnbld/"
+		xmlns:j.2="http://qojqnnly/"
+		xmlns:j.3="http://effcgfms/"
+		xmlns:j.4="http://xmlns.com/foaf/0.1/"
+		xmlns:j.5="http://ujmykqxb/"
+		xmlns:j.6="http://iwvvbley/"
+		xmlns:j.7="http://thvgmfvf/"
+		xmlns:j.8="http://bxbgjxdp/"
+		xmlns:j.9="http://usrcnffg/"
+		xmlns:j.10="http://vqimgqks/"
+		xmlns:j.11="http://xbirunqb/"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:j.13="http://iocfljny/"
+		xmlns:j.12="http://gmakketi/"
+		xmlns:j.15="http://ahnbaexp/"
+		xmlns:j.14="http://qgdcvrpv/"
+		xmlns:j.17="http://mieicfam/"
+		xmlns:j.16="http://jdypmavm/" >
+	<rdf:Description rdf:nodeID="A0">
+		<j.0:nwtb rdf:nodeID="A1"/>
+		<j.13:mxso>awpkewdsddcgfvcnuqib</j.13:mxso>
+		<j.1:ffnq rdf:nodeID="A1"/>
+		<j.4:homepage rdf:nodeID="A2"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A2">
+		<j.11:vxsk rdf:nodeID="A0"/>
+		<j.14:hnqo rdf:nodeID="A3"/>
+		<j.2:erbe rdf:nodeID="A1"/>
+		<j.16:lpoh rdf:resource="urn:urn-5:UVIJ-S61Q6lIwrlEbl-30C30bpY="/>
+		<j.11:vxsk rdf:resource="urn:urn-5:UVIJ-S61Q6lIwrlEbl-30C30bpY="/>
+		<j.10:rjah rdf:nodeID="A4"/>
+		<j.9:yidp rdf:resource="urn:urn-5:UVIJ-S61Q6lIwrlEbl-30C30bpY="/>
+		<j.3:bett rdf:nodeID="A3"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1">
+		<j.4:mbox_sha1sum rdf:resource="urn:urn-5:UVIJ-S61Q6lIwrlEbl-30C30bpY="/>
+		<j.17:jjvm rdf:nodeID="A1"/>
+		<j.12:oyma rdf:nodeID="A5"/>
+		<j.15:tkqc rdf:nodeID="A4"/>
+		<j.14:hnqo rdf:nodeID="A1"/>
+		<j.4:interest rdf:nodeID="A1"/>
+		<j.7:tutn rdf:nodeID="A0"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A6">
+		<j.9:yidp rdf:nodeID="A3"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A3">
+		<j.6:lggw rdf:nodeID="A4"/>
+		<j.4:mbox rdf:nodeID="A1"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="urn:urn-5:UVIJ-S61Q6lIwrlEbl-30C30bpY=">
+		<j.4:mbox rdf:nodeID="A1"/>
+		<j.8:vwbt>thpdomelbphpqeekgecbgiuwjyhmweiwnfcqesgitjypayrdmd jtcdwnmpxrfy vxqupjxtqgjnmyumdvmndufyuixtyydnmgmnj</j.8:vwbt>
+		<j.10:rjah rdf:nodeID="A2"/>
+		<j.5:bflt rdf:nodeID="A0"/>
+	</rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,51 @@
+<rdf:RDF
+    xmlns:j.0="http://ynypriah/"
+    xmlns:j.1="http://xmlns.com/foaf/0.1/"
+    xmlns:j.2="http://ubwatahf/"
+    xmlns:j.3="http://foilohxt/"
+    xmlns:j.4="http://vktlknkc/"
+    xmlns:j.5="http://qqudwjug/"
+    xmlns:j.6="http://bkqodhyl/"
+    xmlns:j.7="http://ngludeyc/"
+    xmlns:j.8="http://jnhmqdkr/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.9="http://apdfcwfa/"
+    xmlns:j.10="http://yvechaix/"
+    xmlns:j.11="http://pylrtxrt/" >
+  <rdf:Description rdf:about="urn:urn-5:s2bPYOqLkBGr+pQumM1bEHpSMMQ=">
+    <j.8:caus rdf:resource="urn:urn-5:fcwGXS4OX6iq8O9AqR0JKkVaHFk="/>
+    <j.2:etob rdf:resource="urn:urn-5:vml5BuTa25EycHFaMWrC3eFt74k="/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <j.1:homepage rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <j.5:twld rdf:nodeID="A2"/>
+    <j.4:husk rdf:resource="urn:urn-5:fcwGXS4OX6iq8O9AqR0JKkVaHFk="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:urn-5:vml5BuTa25EycHFaMWrC3eFt74k=">
+    <j.1:mbox_sha1sum rdf:resource="urn:urn-5:fcwGXS4OX6iq8O9AqR0JKkVaHFk="/>
+    <j.11:uwlt rdf:resource="urn:urn-5:vml5BuTa25EycHFaMWrC3eFt74k="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:urn-5:fcwGXS4OX6iq8O9AqR0JKkVaHFk=">
+    <j.1:interest rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <j.0:ekfl rdf:nodeID="A4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <j.7:hlnh rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <j.9:dbjp rdf:nodeID="A3"/>
+    <j.3:gyei rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <j.10:deph rdf:nodeID="A5"/>
+    <j.10:deph>n </j.10:deph>
+    <j.6:lwfr rdf:resource="urn:urn-5:fcwGXS4OX6iq8O9AqR0JKkVaHFk="/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <j.10:deph rdf:nodeID="A5"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,8 @@
+Notes during development
+
+Open design issues:
+
+Use Set<Source> or Collection<Source>?
+The methods with this argument wouldn't return a different result when a source is present twice, 
+a set is just fine, but the invoking method could be faster if it wouldn't have to assure
+that it is a Set.

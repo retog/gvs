@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Graph Versioning System</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20070110" />
+<meta name="author" content="Reto Bachmann-Gmür" />
+<meta name="author" content="Chris Dollin" />
+<meta name="company" content="Hewlett-Packard Development Company, L.P." />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<style type="text/css">
+  div.exampleInner pre {
+    margin-left: 0em;
+    margin-top: 0em;
+    margin-bottom: 0em
+    font-family: monospace;
+    font-size: 50%
+  }
+  div.exampleOuter {
+    border: 4px double gray;
+    margin: 0em;
+    padding: 0em;
+  }
+  div.exampleInner { 
+    background-color: #d5dee3;
+    border-top-style: double;
+    border-top-color: #d3d3d3;
+    border-bottom-width: 4px;
+    border-bottom-style: double;
+    border-bottom-color: #d3d3d3;
+    padding: 4px;
+    margin: 0em;
+  }
+
+  ul, pre, code {
+	text-align: left;
+  }	
+
+  code {
+	text-align: left;
+	font-size: 50%
+  }
+  div {
+	text-align:center; 
+  }
+
+  #header, #footer, #footer * {
+	text-align:left; 
+  }
+  div.incremental, div.incremental * {visibility: hidden;}
+
+  </style>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"><img src="ui/default/hpc60_topnav_hp_logo.gif" alt="Hewlett-Packard"/></div>
+<div id="footer">
+<h1>HPL / 2007-01-10</h1>
+<h2>Graph Versioning System</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Graph Versioning System</h1>
+<h3>Reto Bachmann-Gmür, Chris Dollin</h3>
+<h4>Hewlett-Packard Development Company, L.P.</h4>
+</div>
+
+
+<div class="slide">
+<h1>RDF and change</h1>
+<ul class="incremental">
+<li>Ontologies can model the time-dimension</li>
+<li>Ontologies rarely take into account that the described world is changing</li>
+<li>For many use-cases change aware ontologies aren't needed and would make things more complicated</li>
+<li>It's impossible to foresee everything that could change</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Approaches</h1>
+<ul class="incremental">
+	<li>Triple-oriented approach</li>
+	<li>Decomposition-oriented approach</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Architecture</h1>
+<ul class="incremental">
+	<li>Deterministic lossless decomposition<ul>
+	<li>RDF-Molecules</li>
+	<li>Functionally Grounded Nodes</li></ul></li>
+	<li>Metamodel: what, when, where</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>API: The Store</h1>
+<ul class="incremental">
+	<li>class com.hp.hpl.jena.gvs.Store<ul>
+	<li>GraphOverTime getGraphOverTime(Set&lt;Source> sources);</li>
+	
+	<li>void assertGraph(Source source, Graph graph, Date date);</li>
+	
+	<li>void revokeGraph(Source source, Graph graph, Date date);</li>
+	
+	<li>void updateGraph(Source source, Graph graph, Date date);</li>
+	
+	<li>Set&lt;Source> getSources();</li></ul></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>API: Graph Over Time</h1>
+<ul class="incremental">
+	<li>class com.hp.hpl.jena.gvs.GraphOverTime<ul>
+		<li>Graph getGraph(Date moment);</li>
+	
+	<li>void assertGraph(Source source, Graph graph, Date date);</li>
+	
+	<li>Iterator&lt;Date> previousChanges(Date d);</li>
+	
+	<li>Iterator&lt;Date> followingChanges(Date d);</li></ul></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Yet another Graph</h1>
+<ul class="incremental">
+	<li>interface Graph extends Collection&lt;Triple></li>
+	<li>Inmutable</li>
+	<li>Identity criterion</li>
+	<li>Java 5</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Application</h1>
+<ul class="incremental">
+	<li>Command line tools</li>
+	<li>Services: HTTP, Aggregator</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>HTTP Access</h1>
+<ul class="incremental">
+	<li>RESTful interface</li>
+	<li>AJAX Application</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+
+
+
+<div class="slide">
+<h1>Where to go?</h1>
+<ul class="incremental">
+<li>Access Control</li>
+<li>Documentation</li>
+<li>Performance</li>
+<li>Jena Model-Wrapper</li>
+<li>Oh, yeah? - feature</li>
+<li>Querying</li>
+<li>Resource oriented browsing</li>
+<li>Remote Synchronization</li>
+<li>Extracting Diffs</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Perfomance improvement</h1>
+<ul class="incremental">
+	<li>Strong hash on all molecules which can be predictably serialized and on all fg-nodes</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Relations between components</h1>
+<img src="components-of-a-graph.png" class="incremental"/>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Thanks</h1>
+<ul>
+	<li>...</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<!-- after slides -->
+</div>
+<!-- after presentation -->
+</body>
+</html>

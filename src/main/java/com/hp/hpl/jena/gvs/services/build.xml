@@ -1,0 +1,55 @@
+<project name="gvs-services" default="all" basedir="../../../../../../../../">
+
+
+	<!-- This ant script generates the vocabulary java file in this packages from their
+	 respective schema definition. It uses the java app jena.schemagen.
+-->
+
+
+	<!-- Construct the classpath -->
+	<path id="project.class.path">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="../jena2/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+
+	
+	<target name="services">
+			<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+				<arg value="-i" />
+				<arg file="rdf/services.rdf" />
+				<arg value="-o" />
+				<arg file="src/com/hp/hpl/jena/gvs/tool/services/SERVICES.java" />
+				<arg value="-n" />
+				<arg value="SERVICES" />
+				<arg value="-a" />
+				<arg value="http://gvs.hpl.hp.com/ontologies/services#" />
+				<arg value="--package" />
+				<arg value="com.hp.hpl.jena.gvs.tool.services" />
+				<arg value="--owl" />
+			</java>
+		</target>
+	
+	<target name="http-listener">
+		<java classname="jena.schemagen" classpathref="project.class.path" fork="true" dir="./">
+			<arg value="-i" />
+			<arg file="rdf/http-listener.rdf" />
+			<arg value="-o" />
+			<arg file="src/com/hp/hpl/jena/gvs/tool/services/HTTPLISTENER.java" />
+			<arg value="-n" />
+			<arg value="HTTPLISTENER" />
+			<arg value="-a" />
+			<arg value="http://gvs.hpl.hp.com/ontologies/http-listener#" />
+			<arg value="--package" />
+			<arg value="com.hp.hpl.jena.gvs.tool.services" />
+			<arg value="--owl" />
+		</java>
+	</target>
+	
+	<target name="all" depends="services, http-listener" />
+
+</project>

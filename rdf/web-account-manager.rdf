@@ -1,0 +1,52 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns="http://gvs.hpl.hp.com/ontologies/web-account-manager#"
+	xml:base="http://gvs.hpl.hp.com/ontologies/web-account-manager">
+
+
+
+
+	<owl:Class rdf:ID="WebAccountManagerConfiguration">
+		<rdfs:label xml:lang="en">WebAccountManagerConfiguration</rdfs:label>
+		<skos:definition xml:lang="en">
+			The configuration of an web account manager
+		</skos:definition>
+		<rdfs:isDefinedBy rdf:resource="" />
+	</owl:Class>
+
+	<owl:DatatypeProperty rdf:ID="webAccountManagerConfiguration">
+		<rdfs:label xml:lang="en">webAccountManagerConfiguration</rdfs:label>
+		<rdf:type
+			rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+		<rdfs:domain rdf:resource="http://gvs.hpl.hp.com/ontologies/http-listener#HTTPListenerConfiguration" />
+		<rdfs:range rdf:resource="#WebAccountManagerConfiguration" />
+		<skos:definition xml:lang="en">
+			The WebAccountManagerConfiguration to used for this configured listener
+		</skos:definition>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:ID="smtpServer">
+		<rdfs:label xml:lang="en">smtpServer</rdfs:label>
+		<rdf:type
+			rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+		<rdfs:domain rdf:resource="#WebAccountManagerConfiguration" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+		<skos:definition xml:lang="en">
+			The smtp server used to send mails
+		</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="fromAddress">
+		<rdfs:label xml:lang="en">fromAddress</rdfs:label>
+		<rdf:type
+			rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty" />
+		<rdfs:domain rdf:resource="#WebAccountManagerConfiguration" />
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+		<skos:definition xml:lang="en">
+			The the from-address server used to send mails
+		</skos:definition>
+	</owl:DatatypeProperty>
+
+</rdf:RDF>

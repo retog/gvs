@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<rdf:RDF 
+   xmlns:wn="http://xmlns.com/wordnet/1.6/" 
+   xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:an="http://rdf.desire.org/vocab/recommend.rdf#" 
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+   xmlns:wot="http://xmlns.com/wot/0.1/" 
+   xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" 
+   xmlns:air="http://www.megginson.com/exp/ns/airports#" >
+
+ <foaf:Person>
+  <foaf:name>Nadia Heninger</foaf:name>
+  <foaf:firstName>Nadia</foaf:firstName>
+  <foaf:surname>Heninger</foaf:surname>
+  <foaf:nick>nadia</foaf:nick> 
+  <foaf:depiction rdf:resource="http://swordfish.rdfweb.org/photos/2002/02/27/thumb-001698.JPG" />
+  <foaf:mbox rdf:resource="mailto:nadia@barbwired.com"/>
+  <foaf:mbox rdf:resource="mailto:nadiah@uclink.berkeley.edu"/>	
+  <foaf:schoolHomepage rdf:resource="http://www.berkeley.edu/" />
+  <foaf:workplaceHomepage rdf:resource="http://www.w3.org/" />
+  <contact:nearestAirport>
+   <wn:Airport air:icao="KOAK" air:iata="OAK" /> 
+  </contact:nearestAirport>
+  <foaf:homepage rdf:resource="http://www.barbwired.com/nadiaweb/"/>
+ <foaf:knows>
+  <foaf:Person>
+   <foaf:mbox rdf:resource="mailto:danbri@w3.org"/>
+   <rdfs:seeAlso rdf:resource="http://rdfweb.org/people/danbri/rdfweb/danbri-foaf.rdf" />
+  </foaf:Person>
+ </foaf:knows>
+ <foaf:knows>
+  <foaf:Person>
+   <foaf:mbox rdf:resource="mailto:charles@w3.org"/>
+  </foaf:Person>
+ </foaf:knows>
+ <foaf:knows>
+  <foaf:Person>
+   <foaf:mbox rdf:resource="mailto:libby.miller@bristol.ac.uk"/>
+  </foaf:Person>
+ </foaf:knows>
+ <foaf:knows>
+  <foaf:Person>
+   <foaf:mbox rdf:resource="mailto:ian@hixie.ch"/>
+  </foaf:Person>
+ </foaf:knows>
+  <foaf:knows>
+   <foaf:Person>
+    <foaf:mbox rdf:resource="mailto:jim@jibbering.com"/>
+   </foaf:Person>
+  </foaf:knows>
+  <foaf:interest rdf:resource="http://xmlns.com/foaf/0.1/" />
+  <foaf:currentProject rdf:resource="http://jigsaw.w3.org/rdfpic/" />
+  <foaf:dontGoThere rdf:resource="http://www.perceive.net/schemas/relationship/spouseOf" />
+ </foaf:Person>
+</rdf:RDF>

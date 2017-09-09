@@ -1,0 +1,17 @@
+@namespace  "http://www.w3.org/1999/xhtml";
+
+.navigation {
+	display: none;
+}
+
+.print {
+	display: inline;
+}
+
+div.print {
+	display: block;
+}
+
+/*a:after {
+  content: " (" attr(href) ")";
+}*/

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/2001/REC-xhtml11-20010531/DTD/xhtml11-flat.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Discobits Editor</title>
+		<link type="text/css" href="stylesheets/discostyle.css" rel="stylesheet" />
+		<link type="text/css" href="stylesheets/gvs.css" rel="stylesheet" />
+		<script type="text/javascript" src="scripts/disco/mozile/mozile.js"></script>
+		<script src="scripts/disco/util.js" type="text/javascript"></script>
+		<script src="scripts/disco/uri.js" type="text/javascript"></script>
+		<script src="scripts/disco/term.js" type="text/javascript"></script>
+		<script src="scripts/disco/match.js" type="text/javascript"></script>
+		<script src="scripts/disco/rdfparser.js" type="text/javascript"></script>
+		<script src="scripts/disco/identity.js" type="text/javascript"></script>
+		
+		<script src="scripts/disco/log.js" type="text/javascript"></script>
+		
+		<script src="scripts/disco/widget-factory.js" type="text/javascript"></script>
+		<script src="scripts/disco/InfoDiscoBit.js" type="text/javascript"></script>
+		<script src="scripts/disco/rdfxmlserializer.js" type="text/javascript"></script>
+		<script src="scripts/gvs.js" type="text/javascript"></script>	
+		<script src="scripts/gvs-disco.js" type="text/javascript"></script>	
+		<script type="text/javascript" src="/application/scripts/parameters" />
+		<script type="text/javascript" src="scripts/disco-editor"/>
+	</head>
+	<body onload="DiscoEditor.init()">
+		<h1><a href="http://www.hp.com/"><img src="images/hpc60_topnav_hp_logo" width="63" height="53" alt="hp.com home"  /></a>
+		Discobits Editor</h1>
+		<p>Edit discobits resources.</p>
+		<div id="warningNoPermission" style="display: none;" class="warning">
+			<h2>Warning</h2>
+			<p>You don't have permission to impersonate any source, due to this you may not save any changes you
+			do. You may want to go <a href="gvs-browser">to the gvs-browser</a> where you can log in or create a new account.</p>
+		</div>
+		<div>
+			Source: <select id="source"><option>...loading...</option></select><br/>
+			Resource: <input type="text" id="discobitURI" size="80"/> <button id="loadButton" onclick="DiscoEditor.setURI()">Load</button>
+		</div>
+		<div id="place" />
+		<div>
+			<a href="/application/gvs-browser">Back to the GVS-Browser</a>
+		</div>
+		<div>
+			<a href="/application/edit-graph?source=" id="discoLink" style="display: none">To the RDF/XML graph editor</a>
+		</div>
+		<div id="footer" class="small">
+		<div>
+		    <a href="http://validator.w3.org/check?uri=referer"><img
+		        src="/application/images/valid-xhtml11"
+		        alt="Valid XHTML 1.1" height="31" width="88" /></a>
+		</div>
+		
+
+		<div id="copyright" class="small"> &copy; 2006 - 2007 Hewlett-Packard Development Company,
+		  L.P. </div>
+		</div> 
+	</body>
+</html>
+

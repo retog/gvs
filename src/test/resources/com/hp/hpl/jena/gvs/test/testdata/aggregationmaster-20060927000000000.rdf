@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:aggr="http://jena.hpl.hp.com/gvs/aggregator#">
+    <aggr:AggregatedSource rdf:about="http://dannyayers.com/.rss">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource>
+    <aggr:AggregatedSource rdf:about="http://norman.walsh.name/index.rss">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource>
+    <aggr:AggregatedSource rdf:about="http://planetrdf.com/index.rdf">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource>
+    <aggr:AggregatedSource rdf:about="http://dannyayers.com/me.rdf">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource>
+    <aggr:AggregatedSource rdf:about="http://dowhatimean.net/category/semantic-web/rdf">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource>
+    <aggr:AggregatedSource rdf:about="http://www.semanticblogging.org/semblog/blog/default/?flavor=rdf">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource>
+    <aggr:AggregatedSource rdf:about="http://dig.csail.mit.edu/breadcrumbs/blog/feed/4">
+    	<aggr:interval rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</aggr:interval>
+    </aggr:AggregatedSource> 
+</rdf:RDF>

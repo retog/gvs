@@ -1,0 +1,151 @@
+@namespace  "http://www.w3.org/1999/xhtml";
+
+img {
+	border: 0;
+}
+
+/*.contentSection h1:before { 
+	content: counter(level1) ". "; 
+}
+
+.contentSection { 
+	counter-increment: level1; 
+}
+
+
+.contentSection .contentSection h1:before { 
+	content: counter(level1) "."counter(level2) ". "; 
+}
+.contentSection .contentSection { 
+	counter-increment: level2; 
+}
+
+.contentSection .contentSection .contentSection h1:before { 
+	content: counter(level1) "." counter(level2) "." counter(level3)". "; 
+}
+.contentSection .contentSection .contentSection { 
+	counter-increment: level3;
+}
+
+.contentSection .contentSection .contentSection .contentSection h1:before { 
+	content: ""; 
+}*/
+
+#footer {
+	position: relative;
+	float: left;
+	width: 740px;
+	text-align: center;
+	margin-top: 5px;
+	z-index: 2;
+	color: #666;
+}
+
+#copyright {
+	width: 100%;
+	position: relative;
+	float: left;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#account {
+	background-color: white;
+	color: black;
+	position: absolute;
+	top: 0;
+	right: 2em;
+}
+
+#head {
+	position: relative;
+}
+
+#filterArea {
+	margin-left: 10em;
+}
+
+#refreshArea {
+	float: right;
+}
+
+.closeButton {
+	float: right;
+}
+
+.simpleForm {
+	width: 60em;
+}
+
+.simpleForm * { /*float:left;*/
+	border: 2px inset;
+}
+
+/*.simpleForm label {
+	color: #666; position: relative; text-align: left; 
+      width: 20em;  display: block;
+}*/
+.simpleForm input [type="text"] {
+	width: 20em;
+	COLOR: #666;
+	position: relative;
+}
+
+.codeBlock {
+	min-height: 1em;
+	margin-left: 3em;
+}
+
+.codeListing {
+	font-family: sans-serif;
+}
+
+.warning {
+	background-color: yellow;
+	color: black;
+	margin: 2em;
+	border: solid;
+}
+
+div.console {
+	background-color: black;
+	color: white;
+	border-width: 4px;
+	border-style: double;
+	border-color: #d3d3d3;
+	padding: 4px;
+	margin: 2em;
+	font-family: monospace;
+}
+
+div.example {
+	background-color: #d5dee3;
+	border-top-width: 4px;
+	border-top-style: double;
+	border-top-color: #d3d3d3;
+	border-bottom-width: 4px;
+	border-bottom-style: double;
+	border-bottom-color: #d3d3d3;
+	padding: 4px;
+	margin: 0em
+}
+
+.contentSection {
+	margin-left: 2em;
+}
+
+.entry { 
+	margin-top: 1ex;
+}
+
+.endNotes {
+		text-align: left;
+}
+
+.endNotes td {
+		width: 5em;;
+}
+
+.print {
+	display: none;
+}

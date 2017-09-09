@@ -1,0 +1,38 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns="http://gvs.hpl.hp.com/ontologies/authorization#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xml:base="http://gvs.hpl.hp.com/ontologies/authorization">
+
+
+
+	<owl:DatatypeProperty rdf:ID="mayImpersonate">
+		<rdfs:label xml:lang="en">mayImpersonate</rdfs:label>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+		<rdfs:range rdf:resource="http://jena.hpl.hp.com/gvs/metamodel#Source" />
+		<skos:definition xml:lang="en">
+			A source the subject may impersonate (i.e. assert and revoke on behalf of)
+		</skos:definition>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:ID="mayRead">
+		<rdfs:label xml:lang="en">mayRead</rdfs:label>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+		<rdfs:range rdf:resource="http://jena.hpl.hp.com/gvs/metamodel#Source" />
+		<skos:definition xml:lang="en">
+			A source the subject may read
+		</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:Class rdf:ID="ClockMaster">
+		<rdfs:label xml:lang="en">ClockMaster</rdfs:label>
+		<rdfs:subclassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+		<skos:definition xml:lang="en">
+			The class of users that may set the Clock
+		</skos:definition>
+	</owl:Class>
+
+
+</rdf:RDF>

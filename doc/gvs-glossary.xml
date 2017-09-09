@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glossary>
+  <glossdiv>
+    <title>Glossary</title>
+
+    <glossentry>
+      <glossterm>Store</glossterm>
+
+      <glossdef>
+        <para>The main entity and interfaces of GVS to which graphs are added
+        and retrieved</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>Metamodel</glossterm>
+
+      <glossdef>
+        <para>The model containing the information about which named component
+        is asserted during which period by whom. </para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>Source (or Asserter)</glossterm>
+
+      <glossdef>
+        <para>A named source of a changing graph</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>GraphOverTime</glossterm>
+
+      <glossdef>
+        <para>A graph changing over time.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>Component</glossterm>
+
+      <glossdef>
+        <para>A component of a lossless decomposition of a graph (i.e. a
+        Molecule or an FgNode.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>Molecule</glossterm>
+
+      <glossdef>
+        <para>A subgraph containing recurvely for all non-grounded nodes its
+        relative</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>FgNode</glossterm>
+
+      <glossdef>
+        <para>A node which is grounded by function and/or inverse functional
+        properties. In the molecule terminology of Ding et All.: a set of
+        Non-terminal molecules grounding the same node. In java it is
+        representeded by a subinterface of GroundedNode and thus trherated the
+        same way as NamedNodes and Literals in most areas.</para>
+      </glossdef>
+    </glossentry>
+
+    <glossentry>
+      <glossterm>Decomposition</glossterm>
+
+      <glossdef>
+        <para>A lossless decomposition of a graph in non-overlapping supgraphs
+        (different components may howver contain the same grounded
+        noded)</para>
+      </glossdef>
+    </glossentry>
+  </glossdiv>
+</glossary>

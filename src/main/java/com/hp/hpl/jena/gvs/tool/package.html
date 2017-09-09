@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GVS-Tool</title>
+</head>
+<body>
+<p>The tool started with java -jar gvs. It loads a gvs-store and allows executing 
+some commands on it.</p>
+
+<p>Usage: java -jar gvs [options] <i>command</i></p>
+<p>Options include:</p>
+<ul>
+<li>--store-directory</li>
+<li>--identity</li>
+<li>--trust (sources></li>
+</ul>
+
+
+<p>The commands it supports:<br/>
+- servicestarter (taking a graph)
+- uploader: updates or  assert a graph (prevents lock-out if web-service missconfigured)
+- set-password: set the sha1 encrypted password of a user
+
+servicestarter: Take configuration graph/source, shouldn't this better be a configuration resource which can be defined by different sources?
+</body>
+</html>

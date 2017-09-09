@@ -1,0 +1,12 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:j.4="http://xmlns.com/foaf/0.1/"
+
+		xmlns:j.9="http://usrcnffg/"
+>
+
+
+	<rdf:Description rdf:nodeID="A6">
+		<j.9:yidp rdf:nodeID="A3"/>
+	</rdf:Description>
+</rdf:RDF>
