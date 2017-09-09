@@ -8,3 +8,5 @@ The original sources can be retrieved from CVS with
 
     cvs -d:pserver:anonymous@jena.cvs.sourceforge.net:/cvsroot/jena login
     cvs -z3 -d:pserver:anonymous@jena.cvs.sourceforge.net:/cvsroot/jena co -P gvs
+    
+The code doesn't compile, because the relased versions of WRHAPI lack some files deleted here: https://github.com/bblfish/wymiwyg-wrhapi/commit/b28d14369dd3c13510b844e6f9d35294f4f29a42
